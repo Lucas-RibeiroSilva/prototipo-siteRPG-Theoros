@@ -90,23 +90,229 @@ main {
     transition: visibility 0s linear 0s, opacity 0.8s ease-out, clip-path 0.8s ease-out;
 }
 
+.opcoes-menu {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #3b2509;
+}
+
+.titulo-menu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-top: -5%;
+    font-size: 50px;
+    font-weight: bold;
+    color: #3b2509;
+}
+
+.titulo-menu a {
+    font-size: 35px;
+    margin-left: 25%;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #3b2509;
+    cursor: pointer;
+}
+
+.titulo-menu a:hover {
+    transform: scale(1.01);
+    filter: brightness(1.5);
+}
+
+.titulo-menu p {
+    font-size: 80px;
+    margin-left: 30%;
+    font-weight: bold;
+    color: #3b2509;
+}
+
+.opcoes-menu a {
+    color: #3b2509;
+    font-size: 45px;
+    margin: 40px;
+    text-decoration: none;
+}
+
+.opcoes-menu a:hover {
+    transform: scale(1.05);
+    filter: brightness(1.5);
+}
+
 /* Card cartão do personagem */
 
 .card-personagem {
     background-image: url('../../images/fundos/fundo_card_retrato.png');
+    background-size: cover;
+    background-position: center;
+    width: 340px;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #3b2509;
 }
+
+#personagem-imagem {
+    width: 250px;
+    height: 200px;
+    border: 2px solid #3b2509;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#personagem-imagem input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#personagem-imagem p {
+    position: absolute;
+    color: #3b2509;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Local de pré-visualização da imagem */
+
+#preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.input-grupo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 85%;
+    margin-top: 5px;
+}
+
+.group-title {
+    color: #3b2509;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.card-personagem label {
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #3b2509;
+    margin-bottom: 10px;
+}
+
+.card-personagem input {
+    width: 100%;
+    padding: 3px;
+    border: 1px solid #3b2509;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #9b713254;
+}
+
+.card-personagem input::placeholder {
+    color: rgb(0, 0, 0);
+    opacity: 1;
+}
+
+.card-personagem .racas-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.card-personagem .racas-icons img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.card-personagem .racas-icons img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.5);
+}
+
+.card-personagem #raca-grupo {
+    margin-top: 20px;
+}
+
+/* Card status do personagem */
 
 .status-personagem {
     background-image: url('../../images/fundos/fundo_card_paisagem.png');
+    background-size: cover;
+    background-position: center;
+    width: 780px;
+    height: 500px;
+    min-height: 520px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    margin: 10px;
+    border: 1px solid #3b2509;
 }
+
+/* Card habilidades do personagem */
 
 .habilidades-personagem {
     background-image: url('../../images/fundos/fundo_card_paisagem.png');
+    background-size: cover;
+    background-position: center;
+    width: 780px;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    margin: 10px;
+    border: 1px solid #3b2509;
 }
+
+/* Card história do personagem */
 
 .historia-personagem {
     background-image: url('../../images/fundos/fundo_card_paisagem.png');
+    background-size: cover;
+    background-position: center;
+    width: 780px;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    margin: 10px;
+    border: 1px solid #3b2509;
 }
+
+/* Botões de salvar e download */
 
 .salvar {
     background-image: url('../../images/botoes/botao_salvar.png');
