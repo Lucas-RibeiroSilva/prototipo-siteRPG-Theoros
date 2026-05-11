@@ -1,116 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personagem</title>
-    <link rel="stylesheet" href="ficha.css">
+
+    <link rel="stylesheet" href="./ficha.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/images/icons/icons_abas/icon_ficha.png">
+
+    <!-- Corrigido -->
+    <link rel="icon" type="image/png" href="../../images/icons/icons_abas/icon_ficha.png">
 </head>
 
 <body>
-    <!-- Cabeçalho com logo e menu -->
+
+    <!-- Cabeçalho -->
     <div class="container">
-        <img src="/images/logo.png" id="logo" alt="Logo do Fichas RPG">
+
+        <!-- Corrigido -->
+        <img src="../../images/logo.png" id="logo" alt="Logo do Fichas RPG">
+
         <a id="botao-menu" onclick="chamarMenu()">Menu</a>
+
     </div>
 
-    <!-- Menu lateral com navegação -->
+    <!-- Menu lateral -->
     <div class="menu" id="menu">
+
         <div class="titulo-menu">
             <a onclick="fecharMenu()">X</a>
             <p>Menu</p>
         </div>
 
-        <!-- Opções do menu aberto -->
         <div class="opcoes-menu">
-            <a href="/index.html">Home</a>
-            <a href="/rotas/criar/criar.html">Criar</a>
-            <a href="ficha.html">Ficha</a>
-            <a href="/rotas/perfil/perfil.html">Perfil</a>
+
+            <!-- Corrigidos -->
+            <a href="../../index.html">Home</a>
+
+            <a href="../criar/criar.html">Criar</a>
+
+            <a href="./ficha.html">Ficha</a>
+
+            <a href="../perfil/perfil.html">Perfil</a>
+
         </div>
+
     </div>
 
-    <!-- Main principal do personagem -->
+    <!-- Conteúdo principal -->
     <main>
+
+        <!-- Card personagem -->
         <section class="card-personagem">
+
             <p class="card-label">Nome do Personagem:</p>
+
             <p id="nome-personagem">Dagan Draconair</p>
+
             <div id="personagem-imagem">
-                <img id="preview" src="/images/icons/perfil_rpg.png" alt="Foto do personagem">
+
+                <!-- Corrigido -->
+                <img
+                    id="preview"
+                    src="../../images/icons/perfil_rpg.png"
+                    alt="Foto do personagem"
+                >
+
             </div>
+
         </section>
 
-        <!-- Seção de status do personagem -->
+        <!-- Status do personagem -->
         <section class="status-personagem">
 
-            <!-- Parte esquerda da seção principal do personagem -->
+            <!-- Coluna esquerda -->
             <div class="coluna-esquerda">
 
                 <!-- Informações básicas -->
                 <div class="linha-info">
-                    <p>Raça: <img src="/images/icons/icone_classe_berserker.png" alt="Ícone de raça"></p>
+
+                    <p>
+                        Raça:
+                        <img
+                            src="../../images/icons/icone_classe_berserker.png"
+                            alt="Ícone de raça"
+                        >
+                    </p>
+
                     <p>Idade: 40</p>
+
                 </div>
 
                 <!-- Informações adicionais -->
                 <div class="linha-info">
-                    <p>Classe: <img src="/images/icons/guerreiro_icon.png" alt="Ícone de classe"></p>
-                    <p id="alinhamento">Alinhamento: Mau</p>
+
+                    <p>
+                        Classe:
+                        <img
+                            src="../../images/icons/guerreiro_icon.png"
+                            alt="Ícone de classe"
+                        >
+                    </p>
+
+                    <p id="alinhamento">
+                        Alinhamento: Mau
+                    </p>
+
                 </div>
 
-                <!-- Linha estilo <hr> -->
+                <!-- Divisória -->
                 <div class="divisoria"></div>
 
-                <!-- História do personagem -->
+                <!-- História -->
                 <div class="historia">
+
                     <p class="section-title">História</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec a diam lectus. Sed sit amet ipsum mauris.
+                        Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.
+                        Donec et mollis dolor.
+                    </p>
+
                 </div>
+
             </div>
 
-            <!-- Parte direita da seção principal do personagem -->
+            <!-- Coluna direita -->
             <div class="coluna-direita">
 
-                <!-- Status do personagem -->
+                <!-- Status -->
                 <p class="titulo-status">Status</p>
+
                 <div class="grade-status">
+
                     <span>For: 9</span>
                     <span>Des: 9</span>
                     <span>HP: 9</span>
                     <span>Agi: 9</span>
                     <span>Int: 9</span>
                     <span>FP: 9</span>
+
                 </div>
 
                 <div class="divisoria"></div>
 
-                <!-- Habilidades do personagem -->
+                <!-- Habilidades -->
                 <div class="habilidades">
+
                     <p class="section-title">Habilidades</p>
-                    <p>Habilidade: Bola de Fogo <img src="/images/icons/bola_fogo_icon.png" alt="Bola de fogo"></p>
-                    <p>Habilidade: Lança de gelo <img src="/images/icons/lanca_icon.png" alt="Lança de gelo"></p>
-                    <p>Habilidade: Aerocinese <img src="/images/icons/icon_aerocinese.png" alt="Aerocinese"></p>
+
+                    <p>
+                        Habilidade: Bola de Fogo
+                        <img
+                            src="../../images/icons/bola_fogo_icon.png"
+                            alt="Bola de fogo"
+                        >
+                    </p>
+
+                    <p>
+                        Habilidade: Lança de gelo
+                        <img
+                            src="../../images/icons/lanca_icon.png"
+                            alt="Lança de gelo"
+                        >
+                    </p>
+
+                    <p>
+                        Habilidade: Aerocinese
+                        <img
+                            src="../../images/icons/icon_aerocinese.png"
+                            alt="Aerocinese"
+                        >
+                    </p>
+
                 </div>
+
             </div>
+
         </section>
+
     </main>
 
+    <!-- Botões -->
     <div class="botoes">
+
         <button type="button" class="favoritar"></button>
+
         <button type="button" class="avaliar"></button>
+
         <button type="button" class="download"></button>
+
     </div>
 
-    <!-- Rodapé com direitos autorais -->
+    <!-- Rodapé -->
     <footer>
         <p>© 2026 Fichas RPG. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="ficha.js"></script>
+    <script src="./ficha.js"></script>
+
 </body>
+
 </html>
