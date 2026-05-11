@@ -1,92 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fichas RPG</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/images/icons/icons_abas/icon_index.png">
+
+    <!-- Corrigido -->
+    <link rel="icon" type="image/png" href="./images/icons/icons_abas/icon_index.png">
 </head>
 
 <body>
-    <!-- Header com logo e botão para abrir o menu lateral -->
+
+    <!-- Header -->
     <div class="container">
         <img src="./images/logo.png" id="logo" alt="Logo do Fichas RPG">
+
         <a id="botao-menu" onclick="chamarMenu()">Menu</a>
     </div>
 
-    <!-- Menu lateral com navegação principal -->
+    <!-- Menu lateral -->
     <div class="menu" id="menu">
+
         <div class="titulo-menu">
             <a onclick="fecharMenu()">X</a>
             <p>Menu</p>
         </div>
-        <!-- Opções do menu -->
+
         <div class="opcoes-menu">
-            <a href="index.html">Home</a>
+            <a href="./index.html">Home</a>
             <a href="./rotas/criar/criar.html">Criar</a>
             <a href="./rotas/ficha/ficha.html">Ficha</a>
             <a href="./rotas/perfil/perfil.html">Perfil</a>
         </div>
+
     </div>
 
-    <!-- Pergaminho contendo o conteúdo principal -->
+    <!-- Conteúdo principal -->
     <main class="principal">
-        <!-- Fundo do pergaminho -->
-        <img id="fundo-principal" src="./images/fundos/pergaminho_otimizado.webp" alt="Fundo pergaminho RPG">
 
-        <!-- Seção principal contendo o botão de criação e a ficha em destaque -->
+        <!-- Fundo -->
+        <img 
+            id="fundo-principal"
+            src="./images/fundos/pergaminho_otimizado.webp"
+            alt="Fundo pergaminho RPG"
+        >
+
+        <!-- Destaque -->
         <div class="principal-main">
-            <p id="titulo-criar-ficha">Crie sua própria ficha:</p>
-            <a class="botao-criar" href="./rotas/criar/criar.html">Criar ficha</a>
+
+            <p id="titulo-criar-ficha">
+                Crie sua própria ficha:
+            </p>
+
+            <a class="botao-criar" href="./rotas/criar/criar.html">
+                Criar ficha
+            </a>
 
             <h1>Ficha em Destaque</h1>
+
             <div class="ficha-destaque">
-                <img src="./images/fichas-exemplos/fichas-avaliacao/pou_avaliado.png" alt="Ficha de Elara">
+                <img
+                    src="./images/fichas-exemplos/fichas-avaliacao/pou_avaliado.png"
+                    alt="Ficha de destaque"
+                >
             </div>
+
         </div>
 
-        <!-- Seção contendo carrossel das fichas pré-criadas -->
+        <!-- Pré sets -->
         <div class="principal-main2">
+
             <p>Pré sets de fichas:</p>
+
             <div class="carousel-wrap">
+
                 <div class="carousel-sets" id="carousel-sets">
+
                     <div class="track-sets" id="track-sets">
-                        <div class="slide"><img src="./images/fichas-exemplos/ficha_pingo_gelo.png" alt="Ficha Elara"></div>
-                        <div class="slide"><img src="./images/fichas-exemplos/ficha_dagan_berserk.png" alt="Ficha Finn"></div>
-                        <div class="slide"><img src="./images/fichas-exemplos/ficha_grognak.png" alt="Ficha Grognak"></div>
-                        <div class="slide"><img src="./images/fichas-exemplos/ficha_lyra.png" alt="Ficha Lyra"></div>
+
+                        <div class="slide">
+                            <img
+                                src="./images/fichas-exemplos/ficha_pingo_gelo.png"
+                                alt="Ficha Pingo Gelo"
+                            >
+                        </div>
+
+                        <div class="slide">
+                            <img
+                                src="./images/fichas-exemplos/ficha_dagan_berserk.png"
+                                alt="Ficha Dagan"
+                            >
+                        </div>
+
+                        <div class="slide">
+                            <img
+                                src="./images/fichas-exemplos/ficha_grognak.png"
+                                alt="Ficha Grognak"
+                            >
+                        </div>
+
+                        <div class="slide">
+                            <img
+                                src="./images/fichas-exemplos/ficha_lyra.png"
+                                alt="Ficha Lyra"
+                            >
+                        </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
 
-        <!-- Seção contendo carrossel das fichas da comunidade -->
+        <!-- Comunidade -->
         <div class="principal-main3">
+
             <p>Fichas da comunidade:</p>
+
             <div class="carousel-wrap">
+
                 <div class="carousel-comunidade" id="carousel-comunidade">
+
                     <div class="track-comunidade" id="track-comunidade">
-                        <div class="slide"><img src="./images/fichas-exemplos/fichas-avaliacao/ditto_avaliado.png" alt="Ficha Elara"></div>
-                        <div class="slide"><img src="./images/fichas-exemplos/fichas-avaliacao/abeliao_avaliado.png" alt="Ficha Finn"></div>
-                        <div class="slide"><img src="./images/fichas-exemplos/fichas-avaliacao/finn_avaliado.png" alt="Ficha Grognak"></div>
-                        <div class="slide"><img src="./images/fichas-exemplos/fichas-avaliacao/kael_avaliado.png" alt="Ficha Kael"></div>
+
+                        <div class="slide">
+                            <img
+                                src="./images/fichas-exemplos/fichas-avaliacao/ditto_avaliado.png"
+                                alt="Ficha Ditto"
+                            >
+                        </div>
+
+                        <div class="slide">
+                            <img
+                                src="./images/fichas-exemplos/fichas-avaliacao/abeliao_avaliado.png"
+                                alt="Ficha Abeliao"
+                            >
+                        </div>
+
+                        <div class="slide">
+                            <img
+                                src="./images/fichas-exemplos/fichas-avaliacao/finn_avaliado.png"
+                                alt="Ficha Finn"
+                            >
+                        </div>
+
+                        <div class="slide">
+                            <img
+                                src="./images/fichas-exemplos/fichas-avaliacao/kael_avaliado.png"
+                                alt="Ficha Kael"
+                            >
+                        </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </main>
 
-    <!-- Rodapé com os direitos autorais -->
+    <!-- Rodapé -->
     <footer>
         <p>© 2026 Fichas RPG. Todos os direitos reservados.</p>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="./script.js"></script>
+
 </body>
 
 </html>
