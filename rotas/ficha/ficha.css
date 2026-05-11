@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: url('/images/fundos/fundo_pagina.png');
+    background-image: url('../../images/fundos/fundo_pagina.png');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -44,7 +44,7 @@ main {
     height: 50px;
     top: 20px;
     right: 20px;
-    background-image: url('/images/botoes/botao_menu.png');
+    background-image: url('../../images/botoes/botao_menu.png');
     background-size: 200px;
     background-position: center;
     background-repeat: no-repeat;
@@ -70,7 +70,7 @@ main {
     right: -290px;
     width: 55%;
     height: 112%;
-    background-image: url('/images/fundos/fundo_menu.png');
+    background-image: url('../../images/fundos/fundo_menu.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
@@ -160,39 +160,10 @@ main {
     min-height: 700px;
     padding: 20px;
     margin: 10px;
-    background-image: url('/images/fundos/fundo_card_retrato.png');
+    background-image: url('../../images/fundos/fundo_card_retrato.png');
     background-size: cover;
     background-position: center;
     border: 1px solid #3b2509;
-}
-
-.card-label {
-    font-size: 30px;
-    font-weight: bold;
-    color: #3b2509;
-    margin-bottom: 10px;
-}
-
-.card-personagem p {
-    color: #3b2509;
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 50px;
-}
-
-#personagem-imagem {
-    border: 2px solid #3b2509;
-    width: 350px;
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#preview {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .status-personagem {
@@ -204,144 +175,20 @@ main {
     min-height: 700px;
     padding: 80px;
     margin: 10px;
-    background-image: url('/images/fundos/fundo_card_paisagem.png');
+    background-image: url('../../images/fundos/fundo_card_paisagem.png');
     background-size: cover;
     background-position: center;
     border: 1px solid #3b2509;
 }
 
-.status-personagem label {
-    font-size: 25px;
-    font-weight: bold;
-    color: #3b2509;
-    margin-bottom: 10px;
-}
-
-.status-personagem input {
-    width: 30%;
-    padding: 5px;
-    border: 1px solid #3b2509;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    background-color: #9b713254;
-    color: #000000;
-}
-
-.status-personagem input::placeholder {
-    color: rgb(0, 0, 0);
-    opacity: 1;
-}
-
-.coluna-esquerda,
-.coluna-direita {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 50%;
-}
-
-.coluna-esquerda {
-    padding-right: 40px;
-    border-right: 2px solid #3b2509;
-}
-
-.coluna-direita {
-    padding-left: 40px;
-}
-
-.linha-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 10px;
-}
-
-.titulo-status {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.grade-status {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px 30px;
-    margin-bottom: 20px;
-}
-
-.divisoria {
-    width: 100%;
-    height: 2px;
-    background-color: #3b2509;
-    margin: 15px 0;
-}
-
-.section-title {
-    font-size: 18px;
-    color: #3b2509;
-    text-align: center;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
-
-#alinhamento {
-    padding: 4px 10px;
-    font-weight: bold;
-}
-
-.botoes {
-    display: flex;
-    gap: 400px;
-    margin-top: -100px;
-}
-
-.habilidades p {
-    font-size: 18px;
-    color: #3b2509;
-    text-align: justify;
-    line-height: 1.5;
-}
-
-.habilidades img {
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
-}
-
-.linha-info img {
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
-}
-
-.botoes button:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-}
-
-.favoritar,
-.download,
-.avaliar {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 200px;
-    height: 150px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
 .favoritar {
-    background-image: url('/images/botoes/botao_favoritar.png');
+    background-image: url('../../images/botoes/botao_favoritar.png');
 }
 
 .download {
-    background-image: url('/images/botoes/botao_download.png');
+    background-image: url('../../images/botoes/botao_download.png');
 }
 
 .avaliar {
-    background-image: url('/images/botoes/botao_avaliar.png');
+    background-image: url('../../images/botoes/botao_avaliar.png');
 }
