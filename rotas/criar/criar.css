@@ -1,0 +1,486 @@
+/* Estilos globais da página Criar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "New Rocker", system-ui;
+}
+
+body {
+    background-image: url('/images/fundos/fundo_pagina.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo {
+    margin-top: 0px;
+    width: 250px;
+    height: 250px;
+}
+
+#botao-menu {
+    position: fixed;
+    width: 150px;
+    height: 50px;
+    top: 20px;
+    right: 20px;
+    background-image: url('/images/botoes/botao_menu.png');
+    background-size: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #3b2509;
+    padding: 13px 47px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+#botao-menu:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Menu lateral */
+.menu {
+    position: fixed;
+    top: -55px;
+    right: -290px;
+    width: 55%;
+    height: 112%;
+    background-image: url('/images/fundos/fundo_menu.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    clip-path: inset(0% 0% 100% 0%);
+    transition: visibility 0s linear 0.8s, opacity 0.8s ease-out, clip-path 0.8s ease-out;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu.aberto {
+    clip-path: inset(0% 0% 0% 0%);
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 0.8s ease-out, clip-path 0.8s ease-out;
+}
+
+.opcoes-menu {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #3b2509;
+}
+
+.titulo-menu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-top: -5%;
+    font-size: 50px;
+    font-weight: bold;
+    color: #3b2509;
+}
+
+.titulo-menu a {
+    font-size: 35px;
+    margin-left: 25%;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #3b2509;
+    cursor: pointer;
+}
+
+.titulo-menu a:hover {
+    transform: scale(1.01);
+    filter: brightness(1.5);
+}
+
+.titulo-menu p {
+    font-size: 80px;
+    margin-left: 30%;
+    font-weight: bold;
+    color: #3b2509;
+}
+
+.opcoes-menu a {
+    color: #3b2509;
+    font-size: 45px;
+    margin: 40px;
+    text-decoration: none;
+}
+
+.opcoes-menu a:hover {
+    transform: scale(1.05);
+    filter: brightness(1.5);
+}
+
+/* Card cartão do personagem */
+
+.card-personagem {
+    background-image: url('/images/fundos/fundo_card_retrato.png');
+    background-size: cover;
+    background-position: center;
+    width: 340px;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #3b2509;
+}
+
+#personagem-imagem {
+    width: 250px;
+    height: 200px;
+    border: 2px solid #3b2509;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#personagem-imagem input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#personagem-imagem p {
+    position: absolute;
+    color: #3b2509;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Local de pré-visualização da imagem */
+
+#preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.input-grupo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 85%;
+    margin-top: 5px;
+}
+
+.group-title {
+    color: #3b2509;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.card-personagem label {
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #3b2509;
+    margin-bottom: 10px;
+}
+
+.card-personagem input {
+    width: 100%;
+    padding: 3px;
+    border: 1px solid #3b2509;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #9b713254;
+}
+
+.card-personagem input::placeholder {
+    color: rgb(0, 0, 0);
+    opacity: 1;
+}
+
+.card-personagem .racas-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.card-personagem .racas-icons img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.card-personagem .racas-icons img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.5);
+}
+
+.card-personagem #raca-grupo{
+    margin-top: 20px;
+}
+
+/* Card status do personagem */
+
+.status-personagem {
+    background-image: url('/images/fundos/fundo_card_paisagem.png');
+    background-size: cover;
+    background-position: center;
+    width: 780px;
+    height: 500px;
+    min-height: 520px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    margin: 10px;
+    border: 1px solid #3b2509;
+}
+
+.status-personagem label {
+    font-size: 25px;
+    font-weight: bold;
+    color: #3b2509;
+    margin-bottom: 10px;
+}
+
+.status-personagem input {
+    width: 30%;
+    padding: 5px;
+    border: 1px solid #3b2509;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #9b713254;
+    color: #000000;
+}
+
+.status-personagem input::placeholder {
+    color: rgb(0, 0, 0);
+    opacity: 1;
+}
+
+/* Card habilidades do personagem */
+
+.habilidades-personagem {
+    background-image: url('/images/fundos/fundo_card_paisagem.png');
+    background-size: cover;
+    background-position: center;
+    width: 780px;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    margin: 10px;
+    border: 1px solid #3b2509;
+}
+
+.habilidades-personagem label {
+    font-size: 25px;
+    font-weight: bold;
+    color: #3b2509;
+    margin-bottom: 10px;
+}
+
+.habilidades-personagem input {
+    width: 60%;
+    padding: 5px;
+    border: 1px solid #3b2509;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #9b713254;
+    color: #000000;
+}
+
+.habilidades-personagem input::placeholder {
+    color: rgb(0, 0, 0);
+    opacity: 1;
+}
+
+.habilidades-personagem hr {
+    width: 100%;
+    border: none;
+    border-top: medium double #333;
+}
+
+.habilidades-personagem p {
+    font-size: 25px;
+    font-weight: bold;
+    color: #3b2509;
+    margin-top: 10px;
+}
+
+/* Lista de habilidades adicionadas */
+.lista-habilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding-left: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.habilidade-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #3b2509;
+    font-size: 16px;
+}
+
+.habilidade-item img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+#habilidade-nome {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Card história do personagem */
+.historia-personagem {
+    background-image: url('/images/fundos/fundo_card_paisagem.png');
+    background-size: cover;
+    background-position: center;
+    width: 780px;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    margin: 10px;
+    border: 1px solid #3b2509;
+}
+
+.historia-personagem label {
+    font-size: 25px;
+    font-weight: bold;
+    color: #3b2509;
+    margin-bottom: 10px;
+}
+
+.historia-personagem textarea {
+    width: 616px;
+    height: 205px;
+    padding: 10px;
+    border: 1px solid #3b2509;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #9b713254;
+    color: #000000;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.historia-personagem select,
+.historia-personagem input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #3b2509;
+    color: #3b2509;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #9b713254;
+    color: #000000;
+}
+
+.historia-personagem-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    
+}
+
+#idade::placeholder{
+    color: #000000;
+}
+
+#historia::placeholder {
+    color: #000000;
+    opacity: 1;
+}
+
+/* Botões de salvar e download */
+.salvar,
+.download {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 150px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.salvar {
+    background-image: url('/images/botoes/botao_salvar.png');
+}
+
+.download {
+    background-image: url('/images/botoes/botao_download.png');
+}
+
+.botoes {
+    display: flex;
+    gap: 400px;
+    margin-top: -100px;
+}
+
+.botoes button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}

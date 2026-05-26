@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/images/icons/icons_abas/icon_perfil.png">
+</head>
+
+<body>
+    <!-- Cabeçalho com logo e menu -->
+    <div class="container">
+        <img src="/images/logo.png" id="logo" alt="Logo do Fichas RPG">
+        <a id="botao-menu" onclick="chamarMenu()">Menu</a>
+    </div>
+
+    <!-- Botão do menu -->
+    <div class="menu" id="menu">
+        <div class="titulo-menu">
+            <a onclick="fecharMenu()">X</a>
+            <p>Menu</p>
+        </div>
+
+        <!-- Opções do menu -->
+        <div class="opcoes-menu">
+            <a href="/index.html">Home</a>
+            <a href="/rotas/criar/criar.html">Criar</a>
+            <a href="/rotas/ficha/ficha.html">Ficha</a>
+            <a href="perfil.html">Perfil</a>
+        </div>
+    </div>
+
+    <!-- Perfil Lateral -->
+    <div class="perfil-main">
+
+        <!-- Foto de perfil -->
+        <div class="moldura">
+            <img id="foto-perfil" src="/images/icons/perfil_rpg.png" alt="Foto de perfil do usuário">
+        </div>
+
+        <!-- Informações do perfil -->
+        <p id="nome-perfil">Dagan Draconair</p>
+        <p id="titulo-descricao-perfil">Descrição:</p>
+        <p id="descricao-perfil">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum error odio cupiditate obcaecati cumque consequatur molestiae. Exercitationem ducimus minima rem sequi sapiente asperiores obcaecati culpa atque enim, dolores sed nihil.</p>
+        
+        <div class="perfil-botoes">
+            <button type="button" class="botao-apagar"></button>
+            <button type="button" class="botao-sair"></button>
+        </div>
+
+    </div>
+
+    <!-- Botões para filtrar as fichas -->
+    <div class="opcoes-fichas-div">
+        <div class="opcoes-fichas">
+            <a href="#" id="opcao-criacoes">Criações</a>
+            <a href="#" id="opcao-favoritos">Favoritos</a>
+        </div>
+    </div>
+
+    <!-- Seção das fichas -->
+    <div class="fichas-div">
+        <img id="espada-decorativa" src="/images/espada_dourada.png" alt="Espada decorativa">
+
+        <!-- Card da Ficha 1 -->
+        <article class="ficha-card">
+            <img id="ficha-imagem" src="/images/icons/perfil_rpg.png">
+            <div class="ficha1-informacoes">
+                <div class="ficha1-topo">
+                    <p class="ficha-nome">DAGAN, O BERSERK DA GUERRA ETERNA</p>
+                    <div class="ficha-icons">
+                        <span>Classe:</span><img src="/images/icons/icone_classe_berserker.png" alt="Icone classe">
+                        <span>Raça:</span><img src="/images/icons/guerreiro_icon.png" alt="Icone raça">
+                    </div>
+                    <div class="ficha-avaliacao">
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                    </div>
+                </div>
+                <p class="ficha-descricao">Forjado no sangue de batalhas impossíveis, Dagan é a personificação da destruição absoluta. Seu nome ecoa nos campos de guerra como um presságio de morte, e onde seus passos tocam, o chão treme sob o peso da carnificina iminente.</p>
+                <div class="botoes-ficha">
+                    <button type="button" class="btn-download"></button>
+                    <button type="button" class="btn-excluir"></button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Linha que separa os cards -->
+        <hr>
+
+        <!-- Card da Ficha 2 -->
+        <article class="ficha-card">
+            <img id="ficha-imagem" src="/images/icons/Pou_perfil.png" alt="Ficha 2">
+            <div class="ficha1-informacoes">
+                <div class="ficha1-topo">
+                    <p class="ficha-nome">POU, O DEVORADOR DO VAZIO</p>
+                    <div class="ficha-icons">
+                        <span>Classe:</span><img src="/images/icons/icone_classe_berserker.png" alt="Icone classe">
+                        <span>Raça:</span><img src="/images/icons/guerreiro_icon.png" alt="Icone raça">
+                    </div>
+                    <div class="ficha-avaliacao">
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                    </div>
+                </div>
+                <p class="ficha-descricao">Nascido das profundezas esquecidas entre dimensões digitais, Pou não é apenas uma criatura… é uma entidade ancestral selada em forma inocente para conter um poder absurdo. Pequeno no tamanho, mas infinito na fome, Pou vaga pelos reinos consumindo alimento, conhecimento e energia vital para evoluir além da compreensão mortal.</p>
+                <div class="botoes-ficha">
+                    <button type="button" class="btn-download"></button>
+                    <button type="button" class="btn-excluir"></button>
+                </div>
+            </div>
+        </article>
+
+        <hr>
+
+        <!-- Card da Ficha 3 -->
+        <article class="ficha-card">
+            <img id="ficha-imagem" src="/images/icons/Pingo_perfil.jpg" alt="Ficha 3">
+            <div class="ficha1-informacoes">
+                <div class="ficha1-topo">
+                    <p class="ficha-nome">PINGO, O ÚLTIMO GUARDIÃO DA TEMPESTADE</p>
+                    <div class="ficha-icons">
+                        <span>Classe:</span><img src="/images/icons/icone_classe_berserker.png" alt="Icone classe">
+                        <span>Raça:</span><img src="/images/icons/guerreiro_icon.png" alt="Icone raça">
+                    </div>
+                    <div class="ficha-avaliacao">
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                    </div>
+                </div>
+                <p class="ficha-descricao">Das montanhas congeladas do norte surgiu Pingo, uma criatura lendária marcada pelo poder dos céus. Pequeno na aparência, mas temido até pelos dragões antigos, Pingo carrega dentro de si a fúria da chuva, o rugido do trovão e a velocidade de um relâmpago em batalha.</p>
+                <div class="botoes-ficha">
+                    <button type="button" class="btn-download"></button>
+                    <button type="button" class="btn-excluir"></button>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <script src="perfil.js"></script>
+</body>
+</html>

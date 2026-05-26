@@ -1,0 +1,347 @@
+/* Estilos globais da página Ficha */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "New Rocker", system-ui;
+}
+
+body {
+    background-image: url('/images/fundos/fundo_pagina.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo {
+    margin-top: 0px;
+    width: 250px;
+    height: 250px;
+}
+
+#botao-menu {
+    position: fixed;
+    width: 150px;
+    height: 50px;
+    top: 20px;
+    right: 20px;
+    background-image: url('/images/botoes/botao_menu.png');
+    background-size: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #3b2509;
+    padding: 13px 47px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 1001;
+}
+
+#botao-menu:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Menu lateral */
+
+.menu {
+    position: fixed;
+    top: -55px;
+    right: -290px;
+    width: 55%;
+    height: 112%;
+    background-image: url('/images/fundos/fundo_menu.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    clip-path: inset(0% 0% 100% 0%);
+    transition: visibility 0s linear 0.8s, opacity 0.8s ease-out, clip-path 0.8s ease-out;
+    z-index: 1002;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu.aberto {
+    clip-path: inset(0% 0% 0% 0%);
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 0.8s ease-out, clip-path 0.8s ease-out;
+}
+
+.opcoes-menu {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #3b2509;
+}
+
+.titulo-menu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-top: -5%;
+    font-size: 50px;
+    font-weight: bold;
+    color: #3b2509;
+}
+
+.titulo-menu a {
+    font-size: 35px;
+    margin-left: 25%;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #3b2509;
+    cursor: pointer;
+}
+
+.titulo-menu a:hover {
+    transform: scale(1.01);
+    filter: brightness(1.5);
+}
+
+.titulo-menu p {
+    font-size: 80px;
+    margin-left: 30%;
+    font-weight: bold;
+    color: #3b2509;
+}
+
+.opcoes-menu a {
+    color: #3b2509;
+    font-size: 45px;
+    margin: 40px;
+    text-decoration: none;
+}
+
+.opcoes-menu a:hover {
+    transform: scale(1.05);
+    filter: brightness(1.5);
+}
+
+.input-grupo {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    justify-content: space-evenly;
+}
+
+.card-personagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 460px;
+    min-height: 700px;
+    padding: 20px;
+    margin: 10px;
+    background-image: url('/images/fundos/fundo_card_retrato.png');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #3b2509;
+}
+
+.card-label {
+    font-size: 30px;
+    font-weight: bold;
+    color: #3b2509;
+    margin-bottom: 10px;
+}
+
+.card-personagem p {
+    color: #3b2509;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+#personagem-imagem {
+    border: 2px solid #3b2509;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.status-personagem {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    width: 1050px;
+    min-height: 700px;
+    padding: 80px;
+    margin: 10px;
+    background-image: url('/images/fundos/fundo_card_paisagem.png');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #3b2509;
+}
+
+.status-personagem label {
+    font-size: 25px;
+    font-weight: bold;
+    color: #3b2509;
+    margin-bottom: 10px;
+}
+
+.status-personagem input {
+    width: 30%;
+    padding: 5px;
+    border: 1px solid #3b2509;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #9b713254;
+    color: #000000;
+}
+
+.status-personagem input::placeholder {
+    color: rgb(0, 0, 0);
+    opacity: 1;
+}
+
+.coluna-esquerda,
+.coluna-direita {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+.coluna-esquerda {
+    padding-right: 40px;
+    border-right: 2px solid #3b2509;
+}
+
+.coluna-direita {
+    padding-left: 40px;
+}
+
+.linha-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 10px;
+}
+
+.titulo-status {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.grade-status {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 30px;
+    margin-bottom: 20px;
+}
+
+.divisoria {
+    width: 100%;
+    height: 2px;
+    background-color: #3b2509;
+    margin: 15px 0;
+}
+
+.section-title {
+    font-size: 18px;
+    color: #3b2509;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+#alinhamento {
+    padding: 4px 10px;
+    font-weight: bold;
+}
+
+.botoes {
+    display: flex;
+    gap: 400px;
+    margin-top: -100px;
+}
+
+.habilidades p {
+    font-size: 18px;
+    color: #3b2509;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.habilidades img {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.linha-info img {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.botoes button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.favoritar,
+.download,
+.avaliar {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 150px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.favoritar {
+    background-image: url('/images/botoes/botao_favoritar.png');
+}
+
+.download {
+    background-image: url('/images/botoes/botao_download.png');
+}
+
+.avaliar {
+    background-image: url('/images/botoes/botao_avaliar.png');
+}

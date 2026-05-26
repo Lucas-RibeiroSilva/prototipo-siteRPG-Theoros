@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar</title>
+    <link rel="stylesheet" href="criar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/images/icons/icons_abas/icon_criar.png">
+</head>
+
+<body>
+    <!-- Cabeçalho com logo e menu -->
+    <div class="container">
+        <img src="/images/logo.png" id="logo" alt="Logo do Fichas RPG">
+        <a id="botao-menu" onclick="chamarMenu()">Menu</a>
+    </div>
+
+    <!-- Menu lateral para navegação entre as abas -->
+    <div class="menu" id="menu">
+        <div class="titulo-menu">
+            <a onclick="fecharMenu()">X</a>
+            <p>Menu</p>
+        </div>
+        <!-- Opções do menu aberto -->
+        <div class="opcoes-menu">
+            <a href="/index.html">Home</a>
+            <a href="criar.html">Criar</a>
+            <a href="/rotas/ficha/ficha.html">Ficha</a>
+            <a href="/rotas/perfil/perfil.html">Perfil</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Seção de cadastro do personagem -->
+        <section class="card-personagem">
+
+            <!-- Imagem do personagem -->
+            <div id="personagem-imagem">
+                <input type="file" id="personagem-input-imagem" name="personagem-imagem" accept="image/*" onchange="mostrarPreview(event)">
+                <p>Selecione uma imagem</p>
+                <!-- Onde a imagem será exibida -->
+                <img id="preview" src="#" alt="Preview da imagem" style="display: none;">
+            </div>
+
+            <div class="input-grupo">
+                <label for="nome-personagem">Nome:</label>
+                <input type="text" id="nome-personagem" name="nome-personagem" placeholder="Digite o nome do personagem" maxlength="50" oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')" required>
+            </div>
+
+            <div class="input-grupo" id="classe-grupo">
+                <p class="group-title">Classes:</p>
+
+                <!-- Ícones de classes -->
+                <div class="racas-icons">
+                    <img src="/images/icons/icons_racas_classes/09_escudo.png" alt="Classe escudeiro">
+                    <img src="/images/icons/icons_racas_classes/10_machados.png" alt="Classe bárbaro">
+                    <img src="/images/icons/icons_racas_classes/11_chapeu_mago.png" alt="Classe mago">
+                    <img src="/images/icons/icons_racas_classes/12_arco.png" alt="Classe arqueiro">
+                </div>
+            </div>
+
+            <div class="input-grupo" id="raca-grupo">
+                <p class="group-title">Raças:</p>
+                <!-- Ícones de raças -->
+                <div class="racas-icons">
+                    <img src="/images/icons/icons_racas_classes/01_ladino.png" alt="Raça ladino">
+                    <img src="/images/icons/icons_racas_classes/02_anao.png" alt="Raça anão">
+                    <img src="/images/icons/icons_racas_classes/03_elfo.png" alt="Raça elfo">
+                    <img src="/images/icons/icons_racas_classes/04_orc.png" alt="Raça orc">
+                    <img src="/images/icons/icons_racas_classes/05_tiefling.png" alt="Raça tiefling">
+                    <img src="/images/icons/icons_racas_classes/06_clÃ©rigo.png" alt="Raça clérigo">
+                    <img src="/images/icons/icons_racas_classes/07_draconato.png" alt="Raça draconato">
+                    <img src="/images/icons/icons_racas_classes/08_mago.png" alt="Raça mago">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de atributos do personagem -->
+        <section class="status-personagem">
+            <label for="forca">ST (Força)</label>
+            <input type="text" id="forca" name="forca" maxlength="5" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+
+            <label for="destreza">DX (Destreza)</label>
+            <input type="text" id="destreza" name="destreza" maxlength="5" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+
+            <label for="inteligencia">IQ (Inteligência)</label>
+            <input type="text" id="inteligencia" name="inteligencia" maxlength="5" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+
+            <label for="vigor">HT (Vigor)</label>
+            <input type="text" id="vigor" name="vigor" maxlength="5" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+
+            <label for="pontos-vida">HP (Pontos de Vida)</label>
+            <input type="text" id="pontos-vida" name="pontos-vida" maxlength="5" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+
+            <label for="fadiga">FP (Fadiga)</label>
+            <input type="text" id="fadiga" name="fadiga" maxlength="5" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+
+            <label for="percepcao">Per (Percepção)</label>
+            <input type="text" id="percepcao" name="percepcao" maxlength="5" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+
+            <label for="vontade">Will (Vontade)</label>
+            <input type="text" id="vontade" name="vontade" maxlength="5" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+        </section>
+
+        <!-- Seção de habilidades e lista de habilidades adicionadas -->
+        <section class="habilidades-personagem">
+            <label for="habilidades">Nova Habilidade:</label>
+            <input type="text" id="habilidades-personagem" name="habilidades" placeholder="Digite a habilidade do personagem" maxlength="50" oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')" required>
+
+            <hr>
+            <p id="habilidades-titulo">Habilidades:</p>
+
+            <!-- Onde irão aparecer as habilidades adicionadas -->
+            <ul class="lista-habilidades">
+                <li class="habilidade-item">
+                    <span id="habilidade-nome"><img src="/images/icons/bola_fogo_icon.png" alt="Bola de fogo">Bola de fogo</span>
+                    <span id="habilidade-pontos">Pontos: 5</span>
+                </li>
+                <hr>
+                <li class="habilidade-item">
+                    <span id="habilidade-nome"><img src="/images/icons/lanca_icon.png" alt="Lança de gelo">Lança de gelo</span>
+                    <span id="habilidade-pontos">Pontos: 5</span>
+                </li>
+                <hr>
+                <li class="habilidade-item">
+                    <span id="habilidade-nome"><img src="/images/icons/icon_aerocinese.png" alt="Aerocinese">Aerocinese</span>
+                    <span id="habilidade-pontos">Pontos: 5</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Seção de história e informações adicionais -->
+        <section class="historia-personagem">
+            <label for="historia">História:</label>
+            <textarea id="historia" name="historia" placeholder="Escreva a história do personagem" maxlength="5000" required></textarea>
+
+            <div class="historia-personagem-inputs">
+                <label for="alinhamento">Alinhamento:</label>
+                <select id="alinhamento" name="alinhamento" required>
+                    <option value="">Selecione o alinhamento</option>
+                    <option value="leal-bom">Leal Bom</option>
+                    <option value="neutro-bom">Neutro Bom</option>
+                    <option value="caotico-bom">Caótico Bom</option>
+                </select>
+
+                <label for="idade">Idade:</label>
+                <input type="text" id="idade" name="idade" placeholder="Digite a idade" maxlength="5" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+            </div>
+        </section>
+    </main>
+
+    <div class="botoes">
+        <button type="button" class="salvar"></button>
+        <button type="button" class="download"></button>
+    </div>
+
+    <!-- Rodapé com direitos autorais -->
+    <footer>
+        <p>© 2026 Fichas RPG. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="criar.js"></script>
+</body>
+</html>
